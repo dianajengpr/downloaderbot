@@ -10,9 +10,9 @@ import subprocess  # Untuk menjalankan FFMPEG
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # Ganti dengan informasi bot kamu
-API_ID = 28485220  
-API_HASH = "b627630bddab42ee1d12c420d59e5b27"  
-BOT_TOKEN = "8047420078:AAFHQwDKoxTZZPbJNkBh9jn0r-0e4WYEEJ4"
+API_ID = int(os.environ.get("API_ID"))
+API_HASH = os.environ.get("API_HASH")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 # Inisialisasi bot
 bot = Client("video_downloader", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
